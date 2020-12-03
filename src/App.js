@@ -1,16 +1,20 @@
-import React, { Component } from 'react';
-import Header from './routes/header';
-import Side from './routes/side';
+import React from 'react';
+import AddCount from './routes/count';
+import { ContextProvider } from "./routes/ContextReducer/reducer";
+import Counter from "./routes/ContextReducer/Counter";
+import CounterTest from "./routes/ContextReducer/CounterTest";
+const App = ()=> {
+  return (
+    <>
+      <ContextProvider>
+        <AddCount/>
+        <Counter />
+        <CounterTest />
+      </ContextProvider>
+    </>
+  );
+};
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-       	<Header/>
-         <Side />
-      </div>
-    );
-  }
-}
+  
 
 export default App;

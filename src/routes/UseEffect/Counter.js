@@ -15,11 +15,11 @@ const [person, setPerson] = useState('');
 };
 
 const PersonPage = () =>{
-  const [state, setState] = useState('xxx')
+  const [name, setState] = useState('xxx')
   const changeName = (name) => {
     setState(name)
   };
-  const [loading, person] = AsyncPage({name:state});
+  const [loading, person] = AsyncPage({name});
   return (
     <>
       {loading?<p>Loading...</p>:<p>{person}</p>}
